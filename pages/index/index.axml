@@ -1,0 +1,26 @@
+<view class="home">
+  <scroll-view class="scroll-view" scroll-y>
+    <list>
+    <block a:for="{{items}}">
+      <navigator url="{{item.path}}">
+        <list-item
+        arrow="{{item.arrow}}"
+        index="items-{{index}}"
+        key="items-{{index}}"
+        last="{{index === (items.length - 1)}}"
+      >
+        {{item.title}}
+        <view class="am-list-brief">{{item.brief}}</view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </list-item>
+      </navigator>
+    </block>
+    </list>
+
+    <view class="section">
+      <image style="background-color: #eeeeee; width: 100%; height:225px;" mode="{{aspectFill}}" src="{{src}}" onError="imageError" onLoad="imageLoad" />
+    </view>
+  </scroll-view>
+</view>

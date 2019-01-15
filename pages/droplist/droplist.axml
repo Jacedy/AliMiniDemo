@@ -1,0 +1,13 @@
+<view class="droplist">
+  <form onSubmit="onSubmit" onReset="onReset">
+    <picker name='picker' onChange="pickerTap" value="{{index}}" range="{{array}}">
+      <view class="d-box">
+        <view class="d-textview">{{array[index]}}</view>
+        <image class="d-image" src="/image/icon-down-1.png" mode="aspectFit" />
+      </view>
+    </picker>
+
+    <button class="d-button" type="primary" form-type="submit">提交</button>
+    <button class="d-button" type="primary" form-type="reset">重置</button>
+  </form>
+</view>

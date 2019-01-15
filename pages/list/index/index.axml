@@ -1,0 +1,28 @@
+<view class="list">
+  <scroll-view class="scroll-view" scroll-y>
+    <list>
+      <view slot="header">
+      列表头部
+    </view>
+    <block a:for="{{items}}">
+      <navigator url="{{item.path}}">
+        <list-item
+        arrow="{{item.arrow}}"
+        index="items-{{index}}"
+        key="items-{{index}}"
+        last="{{index === (items.length - 1)}}"
+      >
+        {{item.title}}
+        <view class="am-list-brief">{{item.brief}}</view>
+        <view a:if="{{item.extra}}" slot="extra">
+          {{item.extra}}
+        </view>
+      </list-item>
+      </navigator>
+    </block>
+    <view slot="footer">
+      列表尾部
+    </view>
+    </list>
+  </scroll-view>
+</view>

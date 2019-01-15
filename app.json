@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/droplist/droplist",
+    "pages/list/index/index",
+    "pages/list/style1/list",
+    "pages/list/style2/list",
+    "pages/checkbox/checkbox"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}

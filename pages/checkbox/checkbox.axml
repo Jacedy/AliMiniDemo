@@ -1,0 +1,18 @@
+<view style="padding:16px; background-color:#fff; width:100%;">
+  <form onSubmit="onSubmit" onReset="onReset">
+    <view>
+      <view style="color:#666; font-size:14px; margin-bottom:10px;">多选</view>
+      <view>
+        <checkbox-group name="libs">
+          <label a:for="{{items}}" style="display:flex; align-items:center; height:30px;">
+            <am-checkbox value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}" />
+            <text style="color:#888; font-size:14px; margin-left:8px;">{{item.name}}</text>
+          </label>
+        </checkbox-group>
+      </view>
+      <view style="margin-top:15px">
+        <button type="primary" size="mini" form-type="submit">Submit</button>
+      </view>
+    </view>
+  </form>
+</view>
